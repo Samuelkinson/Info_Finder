@@ -146,7 +146,8 @@ def phone():
         else:
             unique_filename = f'output_{datetime.datetime.now().strftime("%Y%m%d_%H%M%S")}_{uuid.uuid4().hex[:8]}.txt'
             output_file = './Notepads/' + unique_filename  # RNG Output file name
-
+            os.system('cls')
+            print(f"📁The following path is gonna be used: {output_file}\n📑File is gonna be saved as: {unique_filename}")
         #Check if File name already exists
         if os.path.exists(output_file):
             print(f"File '{output_file}' already exists. \nPlease choose another file name. \n")
